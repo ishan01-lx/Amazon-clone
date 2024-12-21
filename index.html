@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Amazon.com. Spend less. Smile More</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/amazon-icon" href="img/amazon-favicon.jpg">
+</head>
+<body>
+    <header>
+    <!-- Navbar -->
+        <div class="navbar">
+            <!-- Amazon logo -->
+            <div class="nav-logo border">
+                <div class="logo"> </div>         
+            </div>
+
+            
+            <div class="nav-address border">
+                <p class="add-first">Deliver to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="add-second">Nepal</p>
+                </div>
+            </div>
+
+             <!-- Nav-search -->
+            <div class="nav-search">
+                <select name="" class="search-select">
+                    <option value="k">All</option>
+                    <option value="">Kids</option>
+                    <option>Fashion</option>
+                    <option>ELectronics</option>
+                    <option>Toys</option>
+                    <option>Computers</option>
+                    <option>Movies & TV</option>
+                    <option>Prime Video</option>
+                    <option>Men`s Fashion</option>
+                    <option>Gaming</option>
+                </select>
+                <input type="text" placeholder="Search Amazon" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="nav-lang">
+
+            </div>
+
+            <div class="nav-signin border">
+                <p><span>Hello, sign in</span></p>
+                <p class="nav-second">Account & Lists</p>
+            </div>
+            <div class="nav-return border">
+                <p><span>Returns</span></p>
+                <p class="nav-second">& Orders</p>
+            </div>
+
+            <div class="nav-cart border">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+            </div>
+        </div>
+
+        <!-- Panel -->
+        <div class="panel">
+            <div class="panel-all">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div>
+
+            <div class="panel-options">
+                <p ><a href="https://www.amazon.com/gp/goldbox?ref_=nav_cs_gb">Today's Deals</a></p>
+                <p><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice">Customer Service</a></p>
+                <p><a href="https://www.amazon.com/registries?ref_=nav_cs_registry&ref_=nav_cs_registry">Registy</a></p>
+                <p><a href="https://www.amazon.com/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc">Gift Cards</a></p>
+                <p><a href="https://www.amazon.com/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell">Sell</a></p>
+            </div>
+
+            <div class="panel-deals">
+                Shop deals in Electronics
+            </div>
+        </div>
+    </header>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+         
+          <img src="img/hero_image2.jpg" style="width:100%">
+         
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="img/hero_image4.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="img/hero_image5.jpg" style="width:100%">
+          </div>
+
+        <div class="mySlides fade">
+            <img src="img/hero_image6.jpg" style="width:100%">
+          </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+    </div>
+        <script>
+            let slideIndex = 1; // Start with the first slide
+
+// Function to show the slides
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+
+  // Adjust slideIndex for manual navigation
+  if (n) {
+    slideIndex += n;
+    if (slideIndex > slides.length) { slideIndex = 1 } // Wrap around to the first slide
+    if (slideIndex < 1) { slideIndex = slides.length } // Wrap around to the last slide
+  }
+
+  // Hide all slides
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  // Show the current slide
+  slides[slideIndex - 1].style.display = "block";
+}
+
+// Manual controls for Next/Previous
+function plusSlides(n) {
+  showSlides(n); // Navigate to the next or previous slide
+}
+
+// Initial call to display the first slide
+showSlides(0);
+
+        </script>
+
+    <div class="shop-section">
+        <div class="box1 box">
+            <div class="box-content">
+                <h2>Health & Personal Care</h2>
+                <div class="box-img" style="background-image: url(img/box1_image.jpg);"></div>
+                <p>See More</p>
+            </div>
+            
+        </div>
+
+        <div class="box2 box"> 
+            <div class="box-content">
+            <h2>Gaming Accessories</h2>
+            <div class="box-img" style="background-image: url(img/box2_image.jpg);"></div>
+            <p><a href="https://www.amazon.com/b/?_encoding=UTF8&node=23508887011&pd_rd_w=fauk0&content-id=amzn1.sym.12129333-2117-4490-9c17-6d31baf0582a&pf_rd_p=12129333-2117-4490-9c17-6d31baf0582a&pf_rd_r=9R8777KQVGZKAW2Z107R&pd_rd_wg=FTLWt&pd_rd_r=1dd660c9-262c-4b3e-9abc-e36e9c432537&ref_=pd_hp_d_atf_unk">Buy now</a></p>
+            </div>
+        </div>
+
+        <div class="box3 box">
+            <div class="box-content">
+                <h2>Home Essentials</h2>
+                <div class="box-img" style="background-image: url(img/box3_image.jpg);"></div>
+                <p>See More</p>
+            </div>
+        </div>
+        <div class="box4 box">
+            <div class="box-content">
+                <h2>Fashion</h2>
+                <div class="box-img" style="background-image: url(img/box4_image.jpg);"></div>
+                <p>See More</p>
+            </div>
+        </div>
+
+        <div class="box5 box">
+            <div class="box-content">
+                <h2>Toys</h2>
+                <div class="box-img" style="background-image: url(img/box5_image.jpg);"></div>
+                <p>Shop now</p>
+            </div>
+        </div>
+
+        <div class="box6 box">
+            <div class="box-content">
+                <h2>Gifts</h2>
+                <div class="box-img" style="background-image: url(img/box6_image.jpg);"></div>
+                <p>See More</p>
+            </div>
+        </div>
+
+        <div class="box4 box">
+            <div class="box-content">
+                <h2>Beauty Products</h2>
+                <div class="box-img" style="background-image: url(img/box7_image.jpg);"></div>
+                <p>See More</p>
+            </div>
+        </div>
+
+        <div class="box4 box">
+            <div class="box-content">
+                <h2>Devices</h2>
+                <div class="box-img" style="background-image: url(img/box8_image.jpg);"></div>
+                <p>See More</p>
+            </div>
+        </div>
+    </div>
+  
+    <div class="login-section">
+        <p class="head">See personalized recommendations</p>
+        <div class="signin-button">
+            <p><a href="https://www.amazon.com/ap/signin?openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fref%3Drhf_sign_in&openid.assoc_handle=usflex&openid.pape.max_auth_age=0">Signin</a></p>
+        </div>
+        <p class="foot">New customer? <a href="https://www.amazon.com/ap/register?openid.mode=checkid_setup&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fref%3Drhf_sign_in&openid.assoc_handle=usflex">Start here.</a>
+        </p>
+    </div>
+    <footer>
+        <div class="foot-panell">
+            Back to top
+        </div>
+    
+        <div class="foot-panel2">
+            <ul>
+                <p>Get to know us</p>
+                <a href="">Careers</a>
+                <a href="">Blog</a>
+                <a href="">About Amazon</a>
+                <a href="">Investor Relations</a>
+                <a href="">Amazon Devices</a>
+                <a href="">Amazon Sciences</a>
+            </ul>
+    
+            <ul>
+                <p>Make Money with Us</p>
+                <a href="">Sell products on Amazon</a>
+                <a href="">Sell on Amazon Business</a>
+                <a href="">Sell apps on Amazon</a>
+                <a href="">Become an Affiliate</a>
+                <a href="">Advertise Your Products</a>
+                <a href="">Self-Publish with Us</a>
+                <a href="">Host an Amazon Hub</a>
+                <a href="">See More Make Money with Us</a>
+            </ul>
+    
+            <ul>
+                <p>Amazon Payment Products</p>
+                <a href="">Amazon BUsiness Card</a>
+                <a href="">Shop with POints</a>
+                <a href="">Reload Your Balance</a>
+                <a href="">Amazon Currency COnverter</a>
+            </ul>
+    
+            <ul>
+                <p>Let Us Help You</p>
+                <a href="">Amazon and COVID-19</a>
+                <a href="">Your Account</a>
+                <a href="">Your Orders</a>
+                <a href="">Shipping Rates & Policies</a>
+                <a href="">Returns & Replacements</a>
+                <a href="">Manage Your COntent and Devices</a>
+                <a href="">Help</a>
+            </ul>
+        </div>
+    
+        <div class="foot-panel3">
+            <!-- amazon logo -->
+            <div class="logo"></div>
+    
+            <!-- language-selector -->
+            <div class="drop-content">
+                <div class="language-selector">
+                    <div class="dropdown-button">
+                        <i class="fa fa-globe"></i> <!-- Ensure proper Font Awesome class -->
+                        <p>English</p>
+                        <i class="fa fa-check"></i>
+                    </div>
+    
+    
+                    <div class="dropdown-menu">
+                        <p class="lang-select-p">Choose lanagugae <a href="">Learn more</a></p>
+                      <label>
+                        <input type="radio" name="language" value="EN" checked> English - EN
+                      </label>
+                      <label>
+                        <input type="radio" name="language" value="ES"> español - ES
+                      </label>
+                      <label>
+                        <input type="radio" name="language" value="AR"> العربية - AR
+                      </label>
+                      <label>
+                        <input type="radio" name="language" value="DE"> Deutsch - DE
+                      </label>
+                      <label>
+                        <input type="radio" name="language" value="HE"> עברית - HE
+                      </label>
+                      <label>
+                        <input type="radio" name="language" value="KO"> 한국어 - KO
+                      </label>
+                      <label>
+                        <input type="radio" name="language" value="PT"> português - PT
+                      </label>
+                      <label>
+                        <input type="radio" name="language" value="ZH-S"> 中文(简体) - ZH
+                      </label>
+                      <label>
+                        <input type="radio" name="language" value="ZH-T"> 中文(繁體) - ZH
+                      </label>
+                    </div>   
+                </div>
+    
+                <!-- money-content -->
+                <div class="dollar">
+                    <i class="fas fa-dollar-sign"></i>
+                    <p>USD-U.S.Dollar</p>
+                </div>   
+    
+                <div class="us-flag">
+                    <p>&#58636;
+                        United States
+                    </p>
+                </div>
+         </div>
+        </div>
+    
+        <div class="foot-panel4">
+            <table>
+                <tr>
+                    <td class="item">
+                        <a href="https://music.amazon.com/?ref=dm_aff_amz_com" class="last-links">
+                            Amazon 
+                            <br>Music
+                            <br>
+                            <span class="last-lines">
+                                Stream millions
+                                <br>
+                                of songs
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            Amazon Ads
+                            <br>
+                            <span class="last-lines">
+                                Reach Customers
+                                <br>
+                                wherever they
+                                <br>
+                                spend their time
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            6pm
+                            <br>
+                            <span class="last-lines">
+                                Score deals
+                                <br>
+                                on fashion brands
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            AbeBooks
+                            <br>
+                            <span class="last-lines">
+                                Books, art
+                                <br>
+                                & collectibles
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            ACX
+                            <br>
+                            <span class="last-lines">
+                                Audiobook Publishing
+                                <br>
+                                Made Easy
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            Sell on Amazon
+                            <br>
+                            <span class="last-lines">
+                                Start a Selling
+                                <br>
+                                Account
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            Veeqo
+                            <br>
+                            <span class="last-lines">
+                                Shipping Software
+                                <br>
+                                Inventory
+                                <br>
+                                Management
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+        
+                <!-- second row -->
+                <tr>
+                    <td class="item">
+                        <a href="" class="last-links">
+                            Amazon 
+                            <br>Business
+                            <br>
+                            <span class="last-lines">
+                                Stream millions
+                                <br>
+                                of songs
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            Amazon Ads
+                            <br>
+                            <span class="last-lines">
+                                Reach Customers
+                                <br>
+                                wherever they
+                                <br>
+                                spend their time
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            6pm
+                            <br>
+                            <span class="last-lines">
+                                Score deals
+                                <br>
+                                on fashion brands
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            AbeBooks
+                            <br>
+                            <span class="last-lines">
+                                Books, art
+                                <br>
+                                & collectibles
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            ACX
+                            <br>
+                            <span class="last-lines">
+                                Audiobook Publishing
+                                <br>
+                                Made Easy
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            Sell on Amazon
+                            <br>
+                            <span class="last-lines">
+                                Start a Selling
+                                <br>
+                                Account
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            Veeqo
+                            <br>
+                            <span class="last-lines">
+                                Shipping Software
+                                <br>
+                                Inventory
+                                <br>
+                                Management
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+        
+                <!-- third row -->
+                <tr>
+                    <td class="item">
+                        <a href="" class="last-links">
+                            Amazon 
+                            <br>Music
+                            <br>
+                            <span class="last-lines">
+                                Stream millions
+                                <br>
+                                of songs
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            Amazon Ads
+                            <br>
+                            <span class="last-lines">
+                                Reach Customers
+                                <br>
+                                wherever they
+                                <br>
+                                spend their time
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            6pm
+                            <br>
+                            <span class="last-lines">
+                                Score deals
+                                <br>
+                                on fashion brands
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            AbeBooks
+                            <br>
+                            <span class="last-lines">
+                                Books, art
+                                <br>
+                                & collectibles
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            ACX
+                            <br>
+                            <span class="last-lines">
+                                Audiobook Publishing
+                                <br>
+                                Made Easy
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            Sell on Amazon
+                            <br>
+                            <span class="last-lines">
+                                Start a Selling
+                                <br>
+                                Account
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            Veeqo
+                            <br>
+                            <span class="last-lines">
+                                Shipping Software
+                                <br>
+                                Inventory
+                                <br>
+                                Management
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+        
+                <!-- fourth row -->
+                <tr>
+                    <td class="item">
+                        <a href="" class="last-links">
+                            Amazon 
+                            <br>Music
+                            <br>
+                            <span class="last-lines">
+                                Stream millions
+                                <br>
+                                of songs
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            Amazon Ads
+                            <br>
+                            <span class="last-lines">
+                                Reach Customers
+                                <br>
+                                wherever they
+                                <br>
+                                spend their time
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            6pm
+                            <br>
+                            <span class="last-lines">
+                                Score deals
+                                <br>
+                                on fashion brands
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            AbeBooks
+                            <br>
+                            <span class="last-lines">
+                                Books, art
+                                <br>
+                                & collectibles
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            ACX
+                            <br>
+                            <span class="last-lines">
+                                Audiobook Publishing
+                                <br>
+                                Made Easy
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            Sell on Amazon
+                            <br>
+                            <span class="last-lines">
+                                Start a Selling
+                                <br>
+                                Account
+                            </span>
+                        </a>
+                    </td>
+                    <td class="spacer" style="width: 3px;"></td>
+        
+                    <td class="item">
+                        <a href="" class="last-links">
+                            Veeqo
+                            <br>
+                            <span class="last-lines">
+                                Shipping Software
+                                <br>
+                                Inventory
+                                <br>
+                                Management
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="foot-panel5">
+            <div class="pages">
+                <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=508088&ref_=footer_cou">Conditions of Use</a>
+                <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=468496&ref_=footer_privacy">Privacy Notice</a>
+                <a href="">Consumer Health Data Privacy Disclosure</a>
+                <a href="https://www.amazon.com/privacyprefs?ref_=footer_iba">Your ads privacy choices</a>
+            </div>
+            <div class="copyright">
+                © 1996-2024, Amazon.com, Inc. or its affiliates
+            </div>
+    </footer>
+    
+    
+    
+    
+    
+</body>
+</html>

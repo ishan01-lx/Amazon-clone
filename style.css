@@ -1,0 +1,523 @@
+* {
+    margin: 0;
+    font-family: Arial;
+    border: border-box;
+}
+body {
+    background-color: #eae4e4;
+}
+
+.navbar {
+    height: 3.75rem;
+    background: linear-gradient(to right, #023f14, #025902);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.nav-logo {
+    height: 3.125rem;
+    width: 6.25rem;
+}
+.logo {
+    background-image: url(img/amazon_logo.png);
+    background-size: cover;
+    height: 50px;
+    width: 100%;
+}
+
+.border {
+    border: 1.5px solid transparent;
+    padding: 8px;
+}
+.border:hover {
+    border: 1.5px solid white;
+    border-radius: 3px;
+}
+
+/* box2 */
+.add-first {
+    color: #cccccc;
+    font-size: 0.85rem;
+    margin-left: 15px;
+}
+.add-second {
+    font-size: 1rem;
+    margin-left: 3px;
+}
+.add-icon {
+    display: flex;
+    align-items: center;
+}
+
+/* box 3 */
+.nav-search {
+    display: flex;
+    justify-content: space-evenly;
+    width: 620px;
+    height: 40px;
+    border-radius: 4px;
+}
+.nav-search:hover {
+    border: 2px solid orange;
+}
+.search-select {
+    background-color: #f3f3f3;
+    width: 50px;
+    text-align: center;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border: none;
+}
+.search-input {
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+}
+.search-icon {
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: rgba(4, 114, 75, 1);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: #0f1111;
+}
+.search-icon:hover {
+    background-color: #023f14;
+    color: white;
+}
+/* box 4 */
+span {
+    font-size: 0.7rem;
+}
+
+.nav-second {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* box 6 */
+
+.nav-cart i {
+    font-size: 30px;
+}
+.nav-cart {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* panel */
+.panel {
+    height: 40px;
+    background: linear-gradient(to right, #066606, #027402);
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.panel-options p {
+    display: inline;
+    margin-left: 15px;
+}
+.panel-options a{
+    text-decoration: none;
+    font-size: 0.89rem;
+    color: white;
+}
+.panel-options {
+    width: 70%;
+    font-size: 0.89rem;
+}
+
+.panel-options p{
+    border: 1px solid transparent;
+    padding: 5px;
+
+}
+.panel-options p:hover {
+    border: 1px solid white;
+    border-radius: 6px;
+    
+}
+
+.panel-deals {
+    font-size: 0.9rem;
+}
+
+/* hero-section */
+.mySlides {
+    display: inline;
+    border: border-box;
+    
+}
+img {
+    vertical-align: top;
+    height:50vh;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/* shop-section */
+.shop-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 200px;
+}
+
+.box {
+    height: 400px;
+    width: 23%;
+    background-color: white;
+    padding: 20px 0px 15px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some depth to the boxes */
+}
+
+.box-img {
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.box-content {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.box-content p {
+    color: rgba(4, 114, 75, 1);;
+}
+
+.login-section {
+    border-top: 0.5px solid rgb(122, 121, 121);
+    border-bottom: 1px solid black;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 150px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    text-align: center;
+    flex-direction: column;
+}
+.login-section .head {
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    text-decoration: solid;
+    font-weight: 700;
+}
+
+.login-section .foot {
+    font-size: 0.8rem;
+    font-weight: 550;
+}
+
+/* sigin button */
+.signin-button {
+    height: 30px;
+    width: 250px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: green;
+    border-radius: 15px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+.signin-button a {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: white;
+}
+
+.signin-button:hover {
+    background-color: rgb(8, 193, 8);
+}
+/* footer */
+
+.foot-panell {
+    background-color: #374758;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+}
+.foot-panel2 {
+    background-color: #222f3d;
+    color: white;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+ul a {
+    display: block;
+    color: #dddddd;
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin-top: 10px;
+}
+
+ul a:hover {
+    text-decoration: underline;
+}
+
+
+.foot-panel2 p {
+    padding-top: 50px;
+    font-weight: 700;
+}
+
+.foot-panel3 {
+    background-color: #222f3d;
+    color: white;
+    border-top: 0.5px solid white;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo {
+    background-image: url(img/amazon_logo.png);
+    background-size: cover;
+    height: 50px;
+    width: 100px;   
+}
+
+.drop-content {
+    display: flex;
+    align-items: center;
+    height: 150px;
+    width: 30%;
+    margin-left: -350px;
+}
+
+.language-selector {
+    display: inline-block;
+  }
+  
+  .language-selector:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .lang-select-p {
+    font-size: 0.7rem;
+  }
+
+  .dropdown-button {
+    background-color: #222f3d; /* Dark background */
+    color: white;
+    border: 1px solid white;
+    display: flex;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 14px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+  }
+  
+  .dropdown-button:hover {
+    background-color: #333;
+  }
+  .dropdown-button i {
+    font-size: 15px;
+    color: #f3f3f3;
+    margin: 0 5px;
+  }
+  .dropdown-button p {
+    margin: 0;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #1a1a1a; /* Dark dropdown */
+    color: white;
+    border: 1px solid #444;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 200px;
+  }
+  
+  .dropdown-menu label {
+    display: block;
+    padding: 5px 0;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu label:hover {
+    background-color: #333;
+  }
+  
+  .dropdown-menu input[type="radio"] {
+    margin-right: 8px;
+  }
+  .dollar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40px;
+    width: 130px;
+    border: 1px solid white;
+    margin-left: 10px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+  }
+  
+  .us-flag {
+    height: 40px;
+    width: 130px;
+    border: 1px solid white;
+    font-size: 0.85rem;
+    margin-left: 10px;
+    border-radius: 4px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+  }
+
+    /* style for foot panel 4 */
+.foot-panel4 {
+    display: table;
+    height: 375.6px;
+    align-items: center;
+    background-color:  #1f2833;
+    width: 208.2vh;
+}
+.foot-panel4 span {
+    font-size: 0.85rem;
+}
+
+table {
+    margin-left: 15%;
+    margin-right: 25%;
+    padding: 10px; 
+}
+table tr{
+    margin-top: 10px;
+    display: flex;
+}
+table tr td a {
+    color: rgb(235, 229, 229);
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    margin-left: 10vh;
+    width: 100%;
+}
+
+.foot-panel4 a {
+    font-size: 0.9rem;
+}
+.foot-panel4 a:hover {
+    text-decoration: underline;
+}
+
+.foot-panel4 span {
+    font-size: 0.7rem;
+}
+
+/* Style for panel5 */
+.foot-panel5 {
+    background-color: #1f2833;
+    color: white;
+    height: 80px;
+    font-size: 0.7rem;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.foot-panel5 a {
+    text-decoration: none;
+    color: rgb(224, 223, 223);
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.foot-panel5 a:hover {
+    text-decoration: underline;
+}
+.pages {
+    padding-top: 25px;
+}
+
+.copyright {
+    padding-top: 5px;
+}
+
+.last-head {
+    font-size: 1rem;
+}
+
