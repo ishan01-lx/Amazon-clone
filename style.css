@@ -219,9 +219,33 @@ img {
     margin-top: 20px;
     position: relative;
     z-index: 1;
-    margin-bottom: 200px;
 }
 
+.shop-books {
+    height: 200px;
+    width: 202vh;
+    background-color: white;
+    position: relative;
+    line-height: 19px;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+.shop-books h2 {
+    padding: 10px;
+}
+div.scroll-container {
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  div.scroll-container img {
+    height: 130px;
+    width: 85px;
+  }
 .box {
     height: 400px;
     width: 23%;
@@ -242,9 +266,40 @@ img {
     margin-left: 1rem;
     margin-right: 1rem;
 }
+.box-content a{
+    text-decoration: none;
+    color: green;
+}
 
+.box-content a:hover {
+    text-decoration: underline;
+}
 .box-content p {
     color: rgba(4, 114, 75, 1);;
+}
+
+.customers-rating {
+    height: 45vh;
+    width: 208vh;
+    border: 1px solid black;
+    margin-top: 15px;
+    border-radius: 5px;
+    border-left: none;
+    padding-top: 10px;
+}
+.checked {
+    color: orange;
+}
+.customers-rating p {
+    margin-right: 100px;
+    margin-left: 10px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.customers-rating img {
+    margin-bottom: 60px;
+    margin-top: 20px;
 }
 
 .login-section {
@@ -257,7 +312,7 @@ img {
     align-items: center;
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-color: #eae4e4;
     text-align: center;
     flex-direction: column;
 }
