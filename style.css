@@ -149,29 +149,117 @@ span {
     font-size: 0.9rem;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Distribute items evenly */
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    .nav-logo {
+        height: 2.8rem; /* Reduce logo height */
+        width: auto; /* Let width adjust proportionally */
+        margin-right: 10px; /* Add spacing around the logo */
+        flex-shrink: 0; /* Prevent logo from shrinking too much */
+    }
+
+    .logo {
+        height: 100%;
+        width: auto; /* Maintain aspect ratio */
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .nav-search {
+        display: flex;
+        flex-grow: 1; /* Let search bar occupy the most space */
+        max-width: 600px; /* Keep it balanced */
+        justify-content: center;
+        margin: 0 auto; /* Center the search bar */
+    }
+
+    .search-select {
+        width: 60px; /* Adjust dropdown size */
+    }
+
+    .search-input {
+        flex-grow: 1; /* Stretch input field */
+        padding: 5px;
+    }
+
+    .nav-address, 
+    .nav-signin, 
+    .nav-return, 
+    .nav-cart {
+        flex: 0 1 auto; /* Adjust items dynamically */
+        text-align: center;
+        margin: 5px;
+    }
+
+    .nav-cart i {
+        font-size: 24px; /* Adjust icon size */
+    }
+
+    .panel {
+        display: none;
+    }
+}
+
+/* For very small screens (mobile) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 8px 10px;
+        height: 15vh;
+    }
+
+    .nav-logo {
+        height: 2.4rem; /* Further reduce logo height for small screens */
+        margin-right: 5px;
+    }
+
+    .nav-search {
+        max-width: 100%; /* Let search bar stretch */
+    }
+
+    .search-select {
+        width: 50px; /* Smaller dropdown size */
+    }
+
+    .panel-options p {
+        display: none;
+    }
+}
+
 /* hero-section */
 .mySlides {
-    display: inline;
+    display: inline-block; /* Aligns each slide next to each other */
     border: border-box;
-    
 }
+
+/* Ensure images take up the full width of the container while maintaining aspect ratio */
 img {
+    width: 100%;
+    height: auto;
     vertical-align: top;
-    height:50vh;
 }
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1500px;
+  max-width: 100%; /* Allow slideshow container to fill the width of its parent */
   position: relative;
   margin: auto;
+  overflow: hidden; /* Prevent images from overflowing */
 }
 
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 30%;
+  top: 50%;
   width: auto;
   padding: 16px;
   margin-top: -22px;
@@ -194,8 +282,6 @@ img {
   background-color: rgba(0,0,0,0.8);
 }
 
-
-
 /* Fading animation */
 .fade {
   animation-name: fade;
@@ -207,11 +293,16 @@ img {
   to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+/* On smaller screens, adjust button font size */
+@media only screen and (max-width: 600px) {
+  .prev, .next {
+    font-size: 14px; /* Reduce button size for mobile */
+    padding: 10px;
+  }
 }
+
 /* shop-section */
+/* Shop Section */
 .shop-section {
     display: flex;
     flex-wrap: wrap;
@@ -221,18 +312,23 @@ img {
     z-index: 1;
 }
 
+/* Shop Books Section */
 .shop-books {
-    height: 200px;
-    width: 202vh;
+    height: auto; /* Allow height to adjust based on content */
+    width: 100%; /* Make it responsive */
     background-color: white;
     position: relative;
     line-height: 19px;
     margin-left: 25px;
     margin-top: 15px;
 }
+
+/* Shop Books Heading */
 .shop-books h2 {
     padding: 10px;
 }
+
+/* Scroll Container */
 div.scroll-container {
     overflow: auto;
     white-space: nowrap;
@@ -240,21 +336,31 @@ div.scroll-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  div.scroll-container img {
+}
+
+div.scroll-container img {
     height: 130px;
     width: 85px;
-  }
+    object-fit: cover; /* Keep images within their dimensions */
+}
+
+/* Boxes */
 .box {
-    height: 400px;
+    height: auto; /* Adjust height to fit content */
     width: 23%;
     background-color: white;
     padding: 20px 0px 15px;
     margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some depth to the boxes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
+/* Hover effect for boxes */
+.box:hover {
+    transform: scale(1.05);
+}
+
+/* Box Image */
 .box-img {
     height: 300px;
     background-size: cover;
@@ -262,11 +368,14 @@ div.scroll-container {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
+/* Box Content */
 .box-content {
     margin-left: 1rem;
     margin-right: 1rem;
 }
-.box-content a{
+
+.box-content a {
     text-decoration: none;
     color: green;
 }
@@ -274,22 +383,83 @@ div.scroll-container {
 .box-content a:hover {
     text-decoration: underline;
 }
+
 .box-content p {
-    color: rgba(4, 114, 75, 1);;
+    color: rgba(4, 114, 75, 1);
 }
 
+/* Responsive Design */
+@media only screen and (max-width: 1200px) {
+    .box {
+        width: 30%; /* Make boxes smaller for larger tablets or small desktops */
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .box {
+        width: 45%; /* Make boxes take up less width on medium screens */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .box {
+        width: 100%; /* Boxes take up full width on smaller screens */
+    }
+
+    .shop-books {
+        width: 100%; /* Full width on smaller screens */
+        margin-left: 0;
+    }
+
+    .shop-section {
+        justify-content: center; /* Center the content on smaller screens */
+    }
+
+    div.scroll-container img {
+        height: 100px; /* Adjust image size for smaller screens */
+        width: 70px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .shop-books {
+        margin-top: 10px; /* Reduce margin for small screens */
+    }
+
+    .box {
+        padding: 10px; /* Reduce padding for smaller devices */
+    }
+
+    .box-img {
+        height: 200px; /* Smaller box images for mobile */
+    }
+
+    .box-content p {
+        font-size: 14px; /* Make text a bit smaller */
+    }
+
+    .box-content a {
+        font-size: 16px; /* Make links a bit smaller */
+    }
+}
+
+/* Customers Rating Section */
 .customers-rating {
-    height: 45vh;
-    width: 208vh;
+    height: auto; /* Allow height to adjust based on content */
+    width: 100%; /* Make it responsive */
     border: 1px solid black;
     margin-top: 15px;
     border-radius: 5px;
     border-left: none;
     padding-top: 10px;
 }
+
+/* Stars (checked class for orange color) */
 .checked {
     color: orange;
 }
+
+/* Paragraph styling in customers-rating */
 .customers-rating p {
     margin-right: 100px;
     margin-left: 10px;
@@ -297,17 +467,75 @@ div.scroll-container {
     margin-top: 20px;
 }
 
+/* Customers Rating Image */
 .customers-rating img {
     margin-bottom: 60px;
     margin-top: 20px;
+    max-width: 100%; /* Ensure the image doesn't overflow */
+    height: auto; /* Maintain aspect ratio */
 }
 
+/* Responsive Design */
+@media only screen and (max-width: 1200px) {
+    .customers-rating {
+        width: 80%; /* Reduce width for large tablets or small desktops */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .customers-rating {
+        width: 90%; /* Reduce width for medium-sized tablets */
+    }
+
+    .customers-rating p {
+        margin-right: 50px; /* Reduce right margin */
+    }
+
+    .customers-rating img {
+        max-width: 80%; /* Make images smaller */
+        margin-bottom: 30px; /* Adjust spacing */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .customers-rating {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .customers-rating p {
+        margin-right: 20px; /* Further reduce right margin */
+        margin-left: 20px; /* Adjust left margin for mobile */
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+
+    .customers-rating img {
+        width: 100%; /* Make image responsive */
+        margin-bottom: 20px; /* Reduce bottom margin */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .customers-rating p {
+        margin-bottom: 20px; /* Reduce bottom margin */
+        font-size: 12px; /* Further reduce text size for mobile */
+    }
+
+    .customers-rating img {
+        width: 100%; /* Ensure image fits on mobile screens */
+        margin-bottom: 10px; /* Reduce spacing */
+    }
+}
+
+
+/* Login Section */
 .login-section {
     border-top: 0.5px solid rgb(122, 121, 121);
     border-bottom: 1px solid black;
     margin-top: 30px;
     margin-bottom: 30px;
-    height: 150px;
+    height: auto; /* Allow height to adjust based on content */
     width: 100%;
     align-items: center;
     display: flex;
@@ -316,6 +544,8 @@ div.scroll-container {
     text-align: center;
     flex-direction: column;
 }
+
+/* Header inside Login Section */
 .login-section .head {
     font-size: 24px;
     font-family: Arial, sans-serif;
@@ -323,14 +553,15 @@ div.scroll-container {
     font-weight: 700;
 }
 
+/* Footer inside Login Section */
 .login-section .foot {
     font-size: 0.8rem;
     font-weight: 550;
 }
 
-/* sigin button */
+/* Signin Button */
 .signin-button {
-    height: 30px;
+    height: 40px;
     width: 250px;
     text-align: center;
     align-items: center;
@@ -340,6 +571,12 @@ div.scroll-container {
     border-radius: 15px;
     margin-top: 8px;
     margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for signin button */
+.signin-button:hover {
+    background-color: darkgreen;
 }
 
 .signin-button a {
@@ -348,11 +585,68 @@ div.scroll-container {
     color: white;
 }
 
+/* Responsive Design */
+@media only screen and (max-width: 1200px) {
+    .login-section .head {
+        font-size: 22px; /* Slightly smaller heading for tablets */
+    }
+
+    .signin-button {
+        width: 200px; /* Reduce button width for medium screens */
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .login-section .head {
+        font-size: 20px; /* Reduce heading size for medium devices */
+    }
+
+    .signin-button {
+        width: 180px; /* Further reduce button width */
+        height: 35px; /* Adjust button height */
+    }
+
+    .login-section .foot {
+        font-size: 0.75rem; /* Smaller footer text */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .login-section .head {
+        font-size: 18px; /* Make the heading smaller for mobile screens */
+    }
+
+    .signin-button {
+        width: 150px; /* Reduce button width on small screens */
+        height: 35px; /* Adjust button height */
+    }
+
+    .login-section .foot {
+        font-size: 0.7rem; /* Smaller footer text for mobile */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .login-section .head {
+        font-size: 16px; /* Further reduce the heading size on very small screens */
+    }
+
+    .signin-button {
+        width: 130px; /* Even smaller button on small mobile screens */
+        height: 30px; /* Adjust button height */
+    }
+
+    .login-section .foot {
+        font-size: 0.6rem; /* Further reduce footer text size */
+    }
+}
+
 .signin-button:hover {
     background-color: rgb(8, 193, 8);
 }
 /* footer */
 
+/* Footer Panel 1 */
 .foot-panell {
     background-color: #374758;
     color: white;
@@ -362,14 +656,19 @@ div.scroll-container {
     align-items: center;
     font-size: 0.85rem;
 }
+
+/* Footer Panel 2 */
 .foot-panel2 {
     background-color: #222f3d;
     color: white;
-    height: 300px;
+    height: auto;
+    padding: 20px 0;
     display: flex;
+    flex-wrap: wrap; /* Allow items to stack on smaller screens */
     justify-content: space-evenly;
 }
 
+/* Styling for links in foot-panel2 */
 ul a {
     display: block;
     color: #dddddd;
@@ -382,12 +681,13 @@ ul a:hover {
     text-decoration: underline;
 }
 
-
+/* Footer Panel 2 - Paragraph */
 .foot-panel2 p {
     padding-top: 50px;
     font-weight: 700;
 }
 
+/* Footer Panel 3 */
 .foot-panel3 {
     background-color: #222f3d;
     color: white;
@@ -398,6 +698,7 @@ ul a:hover {
     align-items: center;
 }
 
+/* Logo styling */
 .logo {
     background-image: url(img/amazon_logo.png);
     background-size: cover;
@@ -405,6 +706,7 @@ ul a:hover {
     width: 100px;   
 }
 
+/* Dropdown Button */
 .drop-content {
     display: flex;
     align-items: center;
@@ -415,17 +717,17 @@ ul a:hover {
 
 .language-selector {
     display: inline-block;
-  }
+}
   
-  .language-selector:hover .dropdown-menu {
+.language-selector:hover .dropdown-menu {
     display: block;
-  }
-  
-  .lang-select-p {
-    font-size: 0.7rem;
-  }
+}
 
-  .dropdown-button {
+.lang-select-p {
+    font-size: 0.7rem;
+}
+
+.dropdown-button {
     background-color: #222f3d; /* Dark background */
     color: white;
     border: 1px solid white;
@@ -439,21 +741,23 @@ ul a:hover {
     padding: 5px;
     border-radius: 4px;
     font-size: 0.85rem;
-  }
+}
   
-  .dropdown-button:hover {
+.dropdown-button:hover {
     background-color: #333;
-  }
-  .dropdown-button i {
+}
+
+.dropdown-button i {
     font-size: 15px;
     color: #f3f3f3;
     margin: 0 5px;
-  }
-  .dropdown-button p {
+}
+
+.dropdown-button p {
     margin: 0;
-  }
-  
-  .dropdown-menu {
+}
+
+.dropdown-menu {
     display: none;
     position: absolute;
     background-color: #1a1a1a; /* Dark dropdown */
@@ -463,56 +767,42 @@ ul a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     width: 200px;
-  }
-  
-  .dropdown-menu label {
+}
+
+.dropdown-menu label {
     display: block;
     padding: 5px 0;
     cursor: pointer;
-  }
-  
-  .dropdown-menu label:hover {
-    background-color: #333;
-  }
-  
-  .dropdown-menu input[type="radio"] {
-    margin-right: 8px;
-  }
-  .dollar {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 40px;
-    width: 130px;
-    border: 1px solid white;
-    margin-left: 10px;
-    font-size: 0.85rem;
-    border-radius: 4px;
-  }
-  
-  .us-flag {
-    height: 40px;
-    width: 130px;
-    border: 1px solid white;
-    font-size: 0.85rem;
-    margin-left: 10px;
-    border-radius: 4px;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    display: flex;
-  }
+}
 
-    /* style for foot panel 4 */
+.dropdown-menu label:hover {
+    background-color: #333;
+}
+
+.dropdown-menu input[type="radio"] {
+    margin-right: 8px;
+}
+
+.dollar, .us-flag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 130px;
+    border: 1px solid white;
+    margin-left: 10px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+}
+
+/* Footer Panel 4 */
 .foot-panel4 {
     display: table;
-    height: 375.6px;
+    height: auto; /* Allow the height to adjust based on content */
     align-items: center;
-    background-color:  #1f2833;
-    width: 208.2vh;
-}
-.foot-panel4 span {
-    font-size: 0.85rem;
+    background-color: #1f2833;
+    width: 100%;
+    padding: 20px 0;
 }
 
 table {
@@ -520,10 +810,12 @@ table {
     margin-right: 25%;
     padding: 10px; 
 }
-table tr{
-    margin-top: 10px;
+
+table tr {
     display: flex;
+    flex-wrap: wrap; /* Ensure table rows stack on smaller screens */
 }
+
 table tr td a {
     color: rgb(235, 229, 229);
     text-decoration: none;
@@ -536,15 +828,12 @@ table tr td a {
 .foot-panel4 a {
     font-size: 0.9rem;
 }
+
 .foot-panel4 a:hover {
     text-decoration: underline;
 }
 
-.foot-panel4 span {
-    font-size: 0.7rem;
-}
-
-/* Style for panel5 */
+/* Footer Panel 5 */
 .foot-panel5 {
     background-color: #1f2833;
     color: white;
@@ -564,6 +853,7 @@ table tr td a {
 .foot-panel5 a:hover {
     text-decoration: underline;
 }
+
 .pages {
     padding-top: 25px;
 }
@@ -576,3 +866,112 @@ table tr td a {
     font-size: 1rem;
 }
 
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 1200px) {
+    /* Adjust font sizes and layout for tablet-sized screens */
+    .foot-panell {
+        font-size: 0.75rem;
+    }
+
+    .foot-panel2 {
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center;
+    }
+
+    .foot-panel3 {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .foot-panel4 {
+        padding: 10px; /* Adjust padding */
+    }
+
+    .foot-panel4 table {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .foot-panel5 {
+        font-size: 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjust for smaller tablets and large mobile screens */
+    .foot-panell {
+        font-size: 0.7rem;
+    }
+
+    .foot-panel2 {
+        flex-direction: column;
+    }
+
+    .foot-panel3 {
+        flex-direction: column;
+    }
+
+    .foot-panel4 {
+        padding: 10px;
+    }
+
+    .foot-panel4 table {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .foot-panel5 {
+        font-size: 0.5rem;
+    }
+
+    .dollar, .us-flag {
+        width: 100px;
+        font-size: 0.7rem;
+    }
+
+    .dropdown-button {
+        width: 80px;
+        font-size: 0.75rem;
+    }
+
+    .dropdown-menu {
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* Adjust for small mobile screens */
+    .foot-panell {
+        font-size: 0.65rem;
+    }
+
+    .foot-panel2 {
+        flex-direction: column;
+    }
+
+    .foot-panel3 {
+        flex-direction: column;
+    }
+
+    .foot-panel4 {
+        display: none;
+    }
+
+    .foot-panel5 {
+        font-size: 0.4rem;
+    }
+
+    .dollar, .us-flag {
+        width: 80px;
+        font-size: 0.6rem;
+        margin-left: 15px;
+    }
+
+    .dropdown-button {
+        width: 60px;
+        font-size: 0.6rem;
+    }
+
+    .dropdown-menu {
+        width: 120px;
+    }
+}
